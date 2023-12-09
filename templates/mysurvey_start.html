@@ -1,0 +1,9 @@
+{% extends 'mybase.html' %}
+{% block body %}
+<p>{{msg}}</p>
+<h1>{{survey.title}}</h1>
+    <h2>{{survey.instructions}}</h2>
+        <form action="/begin">
+            <button>Continue</button>
+        </form>
+{% endblock %}

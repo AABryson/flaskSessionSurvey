@@ -1,0 +1,17 @@
+{% extends 'mybase.html' %}
+{% block content %}
+<!-- what is this? i think gpt said question is object and .question is attribute-->
+<!--did the object name chaange?-->
+<!--why isn't {{question}} sufficient-->
+<h1> {{question}} </h1>
+<!--choices was a list with yes and no; not sure why value= has something-->
+  <!--maybe value attribute has value b/c  won't be entering something; if making radio button, do you need value-->
+  <!--why isn't it suvey.choice?-->
+<form action="/answers" method="POST">
+    {% for choice in survey.choices %}
+    <input type="radio" value="choice" name="choice">{{choice}}
+    {% endfor %}
+    <button>Submit</button>
+
+</form>
+{% endblock %}
